@@ -1,0 +1,16 @@
+# Virtualenv
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+.vscode/
+
+# Generated plots
+*.png
+
+# Dataset (large binary files)
+HPT_handwritten_polish_text_dataset/
