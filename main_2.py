@@ -28,7 +28,7 @@ def select_top_words(DATA_DIR, n=NUM_CLASSES):
 
     for author_id in range(1, NUM_AUTHORS+1):
         txt_path = os.path.join(DATA_DIR, f"author{author_id}", "word_places.txt")
-        with open(txt_path) as f:
+        with open(txt_path, encoding="windows-1250", errors="replace") as f:
             for line in f:
                 if line.startswith("%") or not line.strip():
                     continue
@@ -52,7 +52,7 @@ def load_annotations(DATA_DIR, target_words):
         author_dir = os.path.join(DATA_DIR, f"author{author_id}")
         txt_path = os.path.join(author_dir, "word_places.txt")
 
-        with open(txt_path) as f:
+        with open(txt_path, encoding="windows-1250", errors="replace") as f:
             for line in f:
                 if line.startswith("%") or not line.strip():
                     continue
